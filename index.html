@@ -121,7 +121,8 @@
       }
 
       .tool-menu a,
-      .tool-menu span {
+      .tool-menu span,
+      .page-link {
         display: inline-flex;
         align-items: center;
         min-height: 38px;
@@ -140,6 +141,12 @@
         background: var(--dark-panel);
         color: white;
         box-shadow: 0 0 0 1px rgba(52, 226, 228, 0.12);
+      }
+
+      .page-link {
+        border-color: rgba(16, 18, 20, 0.28);
+        background: rgba(255, 255, 255, 0.86);
+        color: var(--ink);
       }
 
       .tool-menu span {
@@ -416,7 +423,8 @@
         }
 
         .tool-menu a,
-        .tool-menu span {
+        .tool-menu span,
+        .page-link {
           justify-content: center;
           padding: 0 9px;
           text-align: center;
@@ -451,6 +459,7 @@
           <span aria-disabled="true" title="Coming soon">Material Bank</span>
           <a href="Atlas/" aria-label="Open Wasp Atlas">Wasp Atlas</a>
           <span aria-disabled="true" title="Coming soon">Hivelens</span>
+          <a class="page-link" href="about/">About</a>
         </div>
       </nav>
     </header>

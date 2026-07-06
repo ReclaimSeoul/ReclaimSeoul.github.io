@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | Reclaim Seoul | AAVS Seoul 2026 Unit 3</title>
+    <meta
+      name="description"
+      content="About Unit 3 of AAVS Seoul 2026: Reclaim Seoul, its workshop focus, tutors, and student cohort."
+    />
+    <meta property="og:title" content="About | Reclaim Seoul | AAVS Seoul 2026 Unit 3" />
+    <meta
+      property="og:description"
+      content="Workshop brief, tutor biographies, and student cohort for Reclaim Seoul."
+    />
+    <meta
+      property="og:image"
+      content="https://lh3.googleusercontent.com/sitesv/AA5AbUDdDNSEiI6U0xIy3WYnUpgsRg0G82SLc4whn_vBzvpOT9SLzn1z5vR-Hspt1SJfk-05WFETbvdslUpvqsOVpsChBU7GkTAcU8oWnrCkGbPsOplFmcJJ18xxT1FXdJTt-tYYJBQeHraNeVPUxT0hAGBkzOxTb48shtE2oUoPYoDxJLwQajqzeWqIVXgALwDMvPAA8hSQvtLxgNWrPpY49WFkHqNJW18GTCNpWy5kO14=w1280"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../Atlas/assets/fav.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        --ink: #101214;
+        --muted: #596069;
+        --paper: #f3f5ef;
+        --panel: #ffffff;
+        --line: rgba(16, 18, 20, 0.13);
+        --hive-green: #00d084;
+        --hive-cyan: #34e2e4;
+        --hive-lime: #cafa80;
+        --soft-green: rgba(0, 208, 132, 0.13);
+        --dark-panel: #141719;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(17, 19, 24, 0.035) 1px, transparent 1px),
+          linear-gradient(rgba(17, 19, 24, 0.035) 1px, transparent 1px),
+          var(--paper);
+        background-size: 32px 32px;
+        font-family:
+          Sora, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid var(--line);
+        background: rgba(243, 245, 239, 0.92);
+        backdrop-filter: blur(14px);
+      }
+
+      .nav,
+      .section-inner,
+      .footer {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 14px 0;
+      }
+
+      .brand {
+        display: grid;
+        gap: 1px;
+        min-width: 160px;
+        text-decoration: none;
+      }
+
+      .brand strong {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+      }
+
+      .brand strong::after {
+        content: "";
+        display: block;
+        width: 44px;
+        height: 3px;
+        margin-top: 5px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--hive-green), var(--hive-cyan));
+      }
+
+      .brand span {
+        color: var(--muted);
+        font-size: 0.78rem;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        border: 1px solid rgba(16, 18, 20, 0.28);
+        border-radius: 6px;
+        padding: 0 13px;
+        background: rgba(255, 255, 255, 0.86);
+        font-size: 0.86rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .nav-links a.live {
+        border-color: rgba(0, 208, 132, 0.58);
+        background: var(--dark-panel);
+        color: white;
+      }
+
+      .hero {
+        padding: 72px 0 64px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        width: fit-content;
+        border-left: 5px solid var(--hive-green);
+        padding-left: 12px;
+        color: #243038;
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 980px;
+        margin: 20px 0 18px;
+        font-size: clamp(3rem, 9vw, 7.2rem);
+        line-height: 0.88;
+      }
+
+      .lead {
+        max-width: 820px;
+        margin: 0;
+        color: #242932;
+        font-size: clamp(1.06rem, 1.8vw, 1.34rem);
+      }
+
+      main {
+        background: #fbfcf8;
+      }
+
+      section {
+        border-top: 1px solid var(--line);
+        padding: 68px 0;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.28fr);
+        gap: 42px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 4rem);
+        line-height: 0.98;
+      }
+
+      .body-copy {
+        display: grid;
+        gap: 18px;
+        color: #2e333d;
+        font-size: 1.04rem;
+      }
+
+      .body-copy p {
+        margin: 0;
+      }
+
+      .focus-grid,
+      .tutor-grid,
+      .student-grid {
+        display: grid;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .focus-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .focus-item,
+      .student-slot {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .focus-item {
+        min-height: 148px;
+        padding: 18px;
+        font-weight: 700;
+      }
+
+      .focus-item:nth-child(2),
+      .focus-item:nth-child(4) {
+        background: linear-gradient(135deg, rgba(202, 250, 128, 0.34), rgba(52, 226, 228, 0.13));
+      }
+
+      .tutor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .tutor-card {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .tutor-card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        background: var(--dark-panel);
+      }
+
+      .tutor-body {
+        display: grid;
+        gap: 12px;
+        padding: 20px;
+      }
+
+      .tutor-body h3 {
+        margin: 0;
+        font-size: 1.45rem;
+      }
+
+      .affiliation {
+        width: fit-content;
+        border-radius: 999px;
+        padding: 5px 9px;
+        background: linear-gradient(135deg, var(--hive-lime), var(--hive-green));
+        color: var(--ink);
+        font-size: 0.72rem;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      .tutor-body p {
+        margin: 0;
+        color: #2e333d;
+        font-size: 0.95rem;
+      }
+
+      .student-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .student-slot {
+        min-height: 74px;
+        padding: 16px;
+        color: rgba(16, 18, 20, 0.48);
+        font-weight: 700;
+      }
+
+      .footer-wrap {
+        border-top: 1px solid var(--line);
+        background: var(--paper);
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 24px 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 920px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav-links {
+          justify-content: flex-start;
+        }
+
+        .split {
+          grid-template-columns: 1fr;
+        }
+
+        .focus-grid,
+        .tutor-grid,
+        .student-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .nav-links {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 100%;
+        }
+
+        .nav-links a {
+          justify-content: center;
+          text-align: center;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 18vw, 5.8rem);
+        }
+
+        .focus-grid,
+        .tutor-grid,
+        .student-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Site navigation">
+        <a class="brand" href="../">
+          <strong>Reclaim Seoul</strong>
+          <span>AAVS Seoul 2026 / Unit 3</span>
+        </a>
+        <div class="nav-links">
+          <a href="../">Landing</a>
+          <a class="live" href="../Atlas/">Wasp Atlas</a>
+          <a href="https://www.social-algorithms.com/whats-on/2026-unit-3">Unit Brief</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="section-inner">
+        <span class="eyebrow">About the unit</span>
+        <h1>Reclaim Seoul</h1>
+        <p class="lead">
+          Unit 3 of AAVS Seoul 2026 explores combinatorial material reuse for a temporal city,
+          connecting urban material ecologies, fast digitization, computational aggregation, and
+          augmented construction.
+        </p>
+      </div>
+    </div>
+
+    <main>
+      <section>
+        <div class="section-inner split">
+          <h2>Workshop brief</h2>
+          <div class="body-copy">
+            <p>
+              Seoul is framed as a living material resource: a city of temporary uses, informal
+              occupations, retail logistics, and continuous transformation. Reclaimed and readily
+              available materials become the starting point for design rather than a constraint.
+            </p>
+            <p>
+              Students will capture useful geometric and structural properties of non-standard
+              parts through accessible scanning and computer-vision workflows. The emphasis is
+              not perfect digital twins, but operational data such as bounding geometry,
+              connection interfaces, and material behavior.
+            </p>
+            <p>
+              The workshop culminates in physical prototypes and spatial installations that test
+              reversible frameworks for adaptive architecture in Seoul's everyday urban life.
+            </p>
+          </div>
+        </div>
+        <div class="section-inner">
+          <div class="focus-grid" aria-label="Workshop focus areas">
+            <div class="focus-item">Urban observation and material scouting</div>
+            <div class="focus-item">Discrete aggregation with Wasp</div>
+            <div class="focus-item">Computer vision and object recognition</div>
+            <div class="focus-item">AR-guided reversible assembly</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-inner split">
+          <h2>Tutors</h2>
+          <div class="body-copy">
+            <p>
+              The unit is led by Andrea Rossi and Hyo Wook Kim, bringing together computational
+              design, circular construction, full-scale prototyping, robotic fabrication, and
+              augmented assembly research.
+            </p>
+          </div>
+        </div>
+        <div class="section-inner">
+          <div class="tutor-grid">
+            <article class="tutor-card">
+              <img
+                src="https://lh3.googleusercontent.com/sitesv/AA5AbUBNE7SqXz-8yf9OTWrW5_kmqSRKFD4571gf8DpszNBr22F6cgNIa9s_yWWi5UQY8dFnaNtj3XbQ-ZFtHzbOJdDKGvdS46iS9w4qYSAFTA3zXaHWtqq4SyK7jsgeJPhLYUzROQq0jhloCht8Ti_xOJEQosU4_0BacqRoVMQLBT2O-n3Tf1nDYshBhcxpCfU=w1280"
+                alt="Andrea Rossi"
+              />
+              <div class="tutor-body">
+                <span class="affiliation">The Computational Hive</span>
+                <h3>Andrea Rossi</h3>
+                <p>
+                  Andrea Rossi is a computational designer and founder of The Computational Hive,
+                  a consultancy specializing in design automation for architecture and engineering.
+                  His work bridges research and practice, translating advanced computational design
+                  methods into real-world tools.
+                </p>
+                <p>
+                  He is the developer of Wasp, an open-source toolkit for combinatorial design,
+                  and a researcher at the University of Applied Arts Vienna. He holds a PhD with
+                  distinction from TU Darmstadt and has worked at the University of Kassel, Coop
+                  Himmelb(l)au, and ETH Zurich.
+                </p>
+              </div>
+            </article>
+
+            <article class="tutor-card">
+              <img
+                src="https://lh3.googleusercontent.com/sitesv/AA5AbUAx3cgZlDFSfmjksbB-XCBYm60ZnTAgSJtxhmdaa32kb0L1HBVhikDZCukFq9mwIP6QcL9QGlHuyu1cmriVT5FXb3C3sQJqb1UIRuCGxo_bJFiu2QglCh2KjQU1wMXxmoRBBfUrzbpuPJYJL7Di8QbaNoIEWdJWd0y2amq8N4QKIgx51LNHlZ9eiDIGDTtclsRvcTc698OuSas3GfOpOXFgMXMZSt0FQCRdzpFUZbs=w1280"
+                alt="Hyo Wook Kim"
+              />
+              <div class="tutor-body">
+                <span class="affiliation">University of Kassel</span>
+                <h3>Hyo Wook Kim</h3>
+                <p>
+                  Hyo Wook Kim is a Research Associate at the Department of Experimental and
+                  Digital Design and Construction (EDEK) at the University of Kassel, Germany.
+                  His work bridges research and teaching through the design and realization of
+                  1:1 prototypes and full-scale timber pavilion structures.
+                </p>
+                <p>
+                  His research focuses on stress-informed design and automated robotic fabrication
+                  workflows for circular timber construction using reclaimed wood, integrating
+                  AR-supported, adhesive-free assembly methods. He studied architecture in Seoul
+                  and completed his Master's degree in ITECH at the University of Stuttgart.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-inner split">
+          <h2>Students</h2>
+          <div class="body-copy">
+            <p>
+              Add the Unit 3 student cohort here as names are confirmed. The slots are intentionally
+              simple so the list can grow during the workshop.
+            </p>
+          </div>
+        </div>
+        <div class="section-inner">
+          <div class="student-grid" aria-label="Student roster placeholders">
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+            <div class="student-slot">Student name</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer-wrap">
+      <footer class="footer">
+        <span>AAVS Seoul 2026 / Unit 3</span>
+        <span>Reclaim Seoul: Combinatorial Material Reuse for a Temporal City</span>
+      </footer>
+    </div>
+  </body>
+</html>
