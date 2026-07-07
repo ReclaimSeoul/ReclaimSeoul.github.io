@@ -123,7 +123,9 @@
         gap: 8px;
       }
 
-      .nav-links a {
+      .nav-links a,
+      .nav-links span,
+      .page-link {
         display: inline-flex;
         align-items: center;
         min-height: 38px;
@@ -134,12 +136,24 @@
         font-size: 0.86rem;
         font-weight: 700;
         text-decoration: none;
+        white-space: nowrap;
       }
 
       .nav-links a.live {
         border-color: rgba(0, 208, 132, 0.58);
         background: var(--dark-panel);
         color: white;
+      }
+
+      .nav-links span {
+        color: rgba(17, 19, 24, 0.46);
+        cursor: not-allowed;
+      }
+
+      .page-link {
+        border-color: rgba(16, 18, 20, 0.28);
+        background: rgba(255, 255, 255, 0.86);
+        color: var(--ink);
       }
 
       .hero {
@@ -334,9 +348,12 @@
           width: 100%;
         }
 
-        .nav-links a {
+        .nav-links a,
+        .nav-links span,
+        .page-link {
           justify-content: center;
           text-align: center;
+          white-space: normal;
         }
 
         h1 {
@@ -359,10 +376,11 @@
           <span>AAVS Seoul 2026 / Unit 3</span>
         </a>
         <div class="nav-links">
-          <a href="../">Landing</a>
           <a class="live" href="../UrbanMiningMap/">Urban Mining Map</a>
+          <span aria-disabled="true" title="Coming soon">Material Bank</span>
           <a class="live" href="../Atlas/">Wasp Atlas</a>
-          <a href="https://www.social-algorithms.com/whats-on/2026-unit-3">Unit Brief</a>
+          <span aria-disabled="true" title="Coming soon">Hivelens</span>
+          <a class="page-link" href="./" aria-current="page">About</a>
         </div>
       </nav>
     </header>
