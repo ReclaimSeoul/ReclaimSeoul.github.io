@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Reclaim Seoul</title>
+    <script>
+      (function (locationRef) {
+        var path = locationRef.pathname;
+
+        if (path.indexOf('/Atlas/') === 0) {
+          var route = path.slice('/Atlas'.length).replace(/&/g, '~and~');
+          var query = locationRef.search
+            ? '&' + locationRef.search.slice(1).replace(/&/g, '~and~')
+            : '';
+
+          locationRef.replace(
+            locationRef.protocol +
+              '//' +
+              locationRef.hostname +
+              (locationRef.port ? ':' + locationRef.port : '') +
+              '/Atlas/?' +
+              route +
+              query +
+              locationRef.hash
+          );
+          return;
+        }
+
+        locationRef.replace(
+          locationRef.protocol +
+            '//' +
+            locationRef.hostname +
+            (locationRef.port ? ':' + locationRef.port : '') +
+            '/'
+        );
+      })(window.location);
+    </script>
+  </head>
+  <body></body>
+</html>
