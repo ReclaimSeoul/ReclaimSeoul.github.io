@@ -299,10 +299,22 @@
       }
 
       .student-slot {
+        display: grid;
+        gap: 6px;
+        align-content: start;
         min-height: 74px;
         padding: 16px;
+      }
+
+      .student-name {
+        color: rgba(16, 18, 20, 0.72);
+        font-weight: 760;
+      }
+
+      .student-university {
         color: rgba(16, 18, 20, 0.48);
-        font-weight: 700;
+        font-size: 0.86rem;
+        font-weight: 650;
       }
 
       .footer-wrap {
@@ -503,18 +515,38 @@
         </div>
         <div class="section-inner">
           <div class="student-grid" aria-label="Student roster placeholders">
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
-            <div class="student-slot">Student name</div>
+            <div class="student-slot">
+              <span class="student-name">Seungchan Baek</span>
+              <span class="student-university">Sejong University</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">Jahan Choe</span>
+              <span class="student-university">University College London</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">Seunghyuk Hyun</span>
+              <span class="student-university">Sejong University</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">SeoRin Kweon</span>
+              <span class="student-university">Myongji University</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">Doi Park</span>
+              <span class="student-university">Seoul Women's University</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">Yeunhae Park (Ben)</span>
+              <span class="student-university">University College London</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">Ceren Yuksel</span>
+              <span class="student-university">Korean National University of Arts</span>
+            </div>
+            <div class="student-slot">
+              <span class="student-name">Student name</span>
+              <span class="student-university">University</span>
+            </div>
           </div>
         </div>
       </section>
