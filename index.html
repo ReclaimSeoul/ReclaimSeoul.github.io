@@ -150,6 +150,19 @@
         text-align: center;
       }
 
+      .logo-slot--dark {
+        background: var(--dark-panel);
+        border-style: solid;
+      }
+
+      .logo-slot img {
+        display: block;
+        width: auto;
+        max-width: 84%;
+        max-height: 44px;
+        object-fit: contain;
+      }
+
       .button {
         display: inline-flex;
         align-items: center;
@@ -390,15 +403,6 @@
             <a class="button primary" href="Atlas/">Open Wasp Atlas</a>
             <a class="button secondary" href="https://www.social-algorithms.com/whats-on/2026-unit-3">Unit Brief</a>
           </div>
-          <div class="logo-strip" aria-label="Organizer logos">
-            <span class="logo-strip__label">Organizers</span>
-            <div class="logo-strip__grid">
-              <div class="logo-slot">Organizer logo</div>
-              <div class="logo-slot">Organizer logo</div>
-              <div class="logo-slot">Organizer logo</div>
-              <div class="logo-slot">Organizer logo</div>
-            </div>
-          </div>
         </div>
         <figure class="media-panel" aria-label="Reclaim Seoul workshop image">
           <img
@@ -486,6 +490,29 @@
             <span>Python and OpenCV recognition</span>
             <span>Karamba3D structural analysis</span>
             <span>Mobile and HoloLens AR assembly</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="organizers" aria-label="Organizer logos">
+        <div class="section-inner logo-strip">
+          <span class="logo-strip__label">Organizers</span>
+          <div class="logo-strip__grid">
+            <div class="logo-slot">
+              <img src="assets/logos/organizers/AA.png" alt="Architectural Association" />
+            </div>
+            <div class="logo-slot">
+              <img src="assets/logos/organizers/EDEK-logo_black.png" alt="EDEK" />
+            </div>
+            <div class="logo-slot logo-slot--dark">
+              <img
+                src="assets/logos/organizers/The-Comuptational-Hive-logo-main-neg.png"
+                alt="The Computational Hive"
+              />
+            </div>
+            <div class="logo-slot">
+              <img src="assets/logos/organizers/yonsei-black.png" alt="Yonsei University" />
+            </div>
           </div>
         </div>
       </section>
