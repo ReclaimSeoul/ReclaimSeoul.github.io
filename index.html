@@ -132,35 +132,53 @@
 
       .logo-strip__grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(120px, 1fr));
-        gap: 10px;
-        max-width: 620px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+        width: 100%;
       }
 
       .logo-slot {
-        display: grid;
-        place-items: center;
-        min-height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        height: 64px;
+        padding: 8px 16px;
         border: 1px dashed rgba(16, 18, 20, 0.26);
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.58);
         color: rgba(16, 18, 20, 0.48);
         font-size: 0.78rem;
         font-weight: 760;
+        overflow: hidden;
         text-align: center;
-      }
-
-      .logo-slot--dark {
-        background: var(--dark-panel);
-        border-style: solid;
       }
 
       .logo-slot img {
         display: block;
-        width: auto;
-        max-width: 84%;
-        max-height: 44px;
+        width: 100%;
+        max-width: 220px;
+        height: 42px;
         object-fit: contain;
+        transform: translate(var(--logo-x, 0), var(--logo-y, 0)) scale(var(--logo-scale, 1));
+        transform-origin: center;
+      }
+
+      .logo-slot img.logo-img--edek {
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .logo-slot__text {
+        color: #2e333d;
+        font-size: 0.82rem;
+        font-weight: 760;
+        line-height: 1.2;
+        text-align: left;
+      }
+
+      .logo-slot__text:empty {
+        display: none;
       }
 
       .button {
@@ -499,19 +517,37 @@
           <span class="logo-strip__label">Organizers</span>
           <div class="logo-strip__grid">
             <div class="logo-slot">
-              <img src="assets/logos/organizers/AA.png" alt="Architectural Association" />
-            </div>
-            <div class="logo-slot">
-              <img src="assets/logos/organizers/EDEK-logo_black.png" alt="EDEK" />
-            </div>
-            <div class="logo-slot logo-slot--dark">
               <img
                 src="assets/logos/organizers/The-Comuptational-Hive-logo-main-neg.png"
                 alt="The Computational Hive"
+                style="--logo-scale: 1.4;"
               />
+              <span class="logo-slot__text"></span>
             </div>
             <div class="logo-slot">
-              <img src="assets/logos/organizers/yonsei-black.png" alt="Yonsei University" />
+              <img
+                class="logo-img--edek"
+                src="assets/logos/organizers/EDEK-logo_black.png"
+                alt="EDEK"
+                style="--logo-scale: 0.8;"
+              />
+              <span class="logo-slot__text"></span>
+            </div>
+            <div class="logo-slot">
+              <img
+                src="assets/logos/organizers/AA.png"
+                alt="Architectural Association"
+                style="--logo-scale: 1;"
+              />
+              <span class="logo-slot__text">Architectural Association</span>
+            </div>
+            <div class="logo-slot">
+              <img
+                src="assets/logos/organizers/yonsei-black.png"
+                alt="Yonsei University"
+                style="--logo-scale: 1;"
+              />
+              <span class="logo-slot__text">Yonsei University</span>
             </div>
           </div>
         </div>

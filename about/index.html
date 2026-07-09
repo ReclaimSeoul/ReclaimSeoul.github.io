@@ -145,8 +145,7 @@
 
       .logo-group {
         display: grid;
-        grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
-        gap: 24px;
+        gap: 12px;
         align-items: start;
       }
 
@@ -160,29 +159,48 @@
 
       .logo-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(120px, 1fr));
-        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+        width: 100%;
       }
 
       .logo-slot {
-        display: grid;
-        place-items: center;
-        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        height: 64px;
+        padding: 8px 16px;
         border: 1px dashed rgba(16, 18, 20, 0.26);
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.68);
         color: rgba(16, 18, 20, 0.48);
         font-size: 0.78rem;
         font-weight: 760;
+        overflow: hidden;
         text-align: center;
       }
 
       .logo-slot img {
         display: block;
-        width: auto;
-        max-width: 84%;
-        max-height: 48px;
+        width: 100%;
+        max-width: 220px;
+        height: 42px;
         object-fit: contain;
+        transform: translate(var(--logo-x, 0), var(--logo-y, 0)) scale(var(--logo-scale, 1));
+        transform-origin: center;
+      }
+
+      .logo-slot__text {
+        color: #2e333d;
+        font-size: 0.82rem;
+        font-weight: 760;
+        line-height: 1.2;
+        text-align: left;
+      }
+
+      .logo-slot__text:empty {
+        display: none;
       }
 
       .focus-grid,
@@ -309,8 +327,7 @@
       }
 
       @media (max-width: 920px) {
-        .split,
-        .logo-group {
+        .split {
           grid-template-columns: 1fr;
         }
 
@@ -499,13 +516,24 @@
             <h2 class="logo-group__title">Hosting institutions</h2>
             <div class="logo-grid">
               <div class="logo-slot">
-                <img src="../assets/logos/host/AAVS.png" alt="AAVS" />
+                <img src="../assets/logos/host/AAVS.png" alt="AAVS" style="--logo-scale: 1;" />
+                <span class="logo-slot__text"></span>
               </div>
               <div class="logo-slot">
-                <img src="../assets/logos/host/SARG.png" alt="Social Algorithms Research Group" />
+                <img
+                  src="../assets/logos/host/SARG.png"
+                  alt="Social Algorithms Research Group"
+                  style="--logo-scale: 1.2;"
+                />
+                <span class="logo-slot__text">Social Algorithms Research Group</span>
               </div>
               <div class="logo-slot">
-                <img src="../assets/logos/host/yonsei-black.png" alt="Yonsei University" />
+                <img
+                  src="../assets/logos/host/yonsei-black.png"
+                  alt="Yonsei University"
+                  style="--logo-scale: 1;"
+                />
+                <span class="logo-slot__text">Yonsei University</span>
               </div>
             </div>
           </div>
@@ -513,16 +541,24 @@
             <h2 class="logo-group__title">Partners</h2>
             <div class="logo-grid">
               <div class="logo-slot">
-                <img src="../assets/logos/partners/roger_winkler_logo.jpeg" alt="Roger Winkler" />
+                <img
+                  src="../assets/logos/partners/roger_winkler_logo.jpeg"
+                  alt="Roger Winkler"
+                  style="--logo-scale: 1.4;"
+                />
+                <span class="logo-slot__text">Roger Winkler</span>
               </div>
               <div class="logo-slot">
-                <img src="../assets/logos/partners/SUP.png" alt="SUP" />
+                <img src="../assets/logos/partners/SUP.png" alt="SUP" style="--logo-scale: 1;" />
+                <span class="logo-slot__text"></span>
               </div>
               <div class="logo-slot">
                 <img
                   src="../assets/logos/partners/younhyunMatLib-logo-black.png"
                   alt="Younhyun Material Library"
+                  style="--logo-scale: 1.4;"
                 />
+                <span class="logo-slot__text">Younhyun Material Library</span>
               </div>
             </div>
           </div>
