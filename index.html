@@ -117,6 +117,39 @@
         margin-top: 30px;
       }
 
+      .logo-strip {
+        display: grid;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .logo-strip__label {
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .logo-strip__grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 10px;
+        max-width: 620px;
+      }
+
+      .logo-slot {
+        display: grid;
+        place-items: center;
+        min-height: 68px;
+        border: 1px dashed rgba(16, 18, 20, 0.26);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.58);
+        color: rgba(16, 18, 20, 0.48);
+        font-size: 0.78rem;
+        font-weight: 760;
+        text-align: center;
+      }
+
       .button {
         display: inline-flex;
         align-items: center;
@@ -329,6 +362,10 @@
           width: 100%;
         }
 
+        .logo-strip__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
         .tool-grid,
         .learning-list {
           grid-template-columns: 1fr;
@@ -352,6 +389,15 @@
           <div class="hero-actions">
             <a class="button primary" href="Atlas/">Open Wasp Atlas</a>
             <a class="button secondary" href="https://www.social-algorithms.com/whats-on/2026-unit-3">Unit Brief</a>
+          </div>
+          <div class="logo-strip" aria-label="Organizer logos">
+            <span class="logo-strip__label">Organizers</span>
+            <div class="logo-strip__grid">
+              <div class="logo-slot">Organizer logo</div>
+              <div class="logo-slot">Organizer logo</div>
+              <div class="logo-slot">Organizer logo</div>
+              <div class="logo-slot">Organizer logo</div>
+            </div>
           </div>
         </div>
         <figure class="media-panel" aria-label="Reclaim Seoul workshop image">

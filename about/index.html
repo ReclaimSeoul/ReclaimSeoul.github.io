@@ -133,6 +133,50 @@
         margin: 0;
       }
 
+      .logo-section {
+        padding-top: 42px;
+        padding-bottom: 42px;
+      }
+
+      .logo-groups {
+        display: grid;
+        gap: 28px;
+      }
+
+      .logo-group {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.28fr) minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+
+      .logo-group__title {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 10px;
+      }
+
+      .logo-slot {
+        display: grid;
+        place-items: center;
+        min-height: 76px;
+        border: 1px dashed rgba(16, 18, 20, 0.26);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.68);
+        color: rgba(16, 18, 20, 0.48);
+        font-size: 0.78rem;
+        font-weight: 760;
+        text-align: center;
+      }
+
       .focus-grid,
       .tutor-grid,
       .student-grid {
@@ -257,13 +301,18 @@
       }
 
       @media (max-width: 920px) {
-        .split {
+        .split,
+        .logo-group {
           grid-template-columns: 1fr;
         }
 
         .focus-grid,
         .tutor-grid,
         .student-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .logo-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
@@ -274,6 +323,7 @@
         }
 
         .focus-grid,
+        .logo-grid,
         .tutor-grid,
         .student-grid {
           grid-template-columns: 1fr;
@@ -297,6 +347,29 @@
     </div>
 
     <main>
+      <section class="logo-section" aria-label="Institution and partner logos">
+        <div class="section-inner logo-groups">
+          <div class="logo-group">
+            <h2 class="logo-group__title">Hosting institutions</h2>
+            <div class="logo-grid">
+              <div class="logo-slot">Host logo</div>
+              <div class="logo-slot">Host logo</div>
+              <div class="logo-slot">Host logo</div>
+              <div class="logo-slot">Host logo</div>
+            </div>
+          </div>
+          <div class="logo-group">
+            <h2 class="logo-group__title">Partners</h2>
+            <div class="logo-grid">
+              <div class="logo-slot">Partner logo</div>
+              <div class="logo-slot">Partner logo</div>
+              <div class="logo-slot">Partner logo</div>
+              <div class="logo-slot">Partner logo</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div class="section-inner split">
           <h2>Workshop brief</h2>
