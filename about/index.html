@@ -272,6 +272,13 @@
         padding: 20px;
       }
 
+      .affiliation-row {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        align-items: center;
+      }
+
       .tutor-body h3 {
         margin: 0;
         font-size: 1.45rem;
@@ -286,6 +293,7 @@
         font-size: 0.72rem;
         font-weight: 850;
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
       .tutor-body p {
@@ -460,8 +468,10 @@
                 alt="Andrea Rossi"
               />
               <div class="tutor-body">
-                <span class="affiliation">The Computational Hive</span>
-                <span class="affiliation">University of Applied Arts Vienna</span>
+                <div class="affiliation-row">
+                  <span class="affiliation">The Computational Hive</span>
+                  <span class="affiliation">University of Applied Arts Vienna</span>
+                </div>
                 <h3>Andrea Rossi</h3>
                 <p>
                   Andrea Rossi is a computational designer and founder of The Computational Hive,
