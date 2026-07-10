@@ -157,6 +157,7 @@ class SiteNav extends HTMLElement {
             <a class="live" href="${resolvePath("UrbanMiningMap/")}" aria-label="Open Urban Mining Map">Urban Mining Map</a>
             <span aria-disabled="true" title="Coming soon">Material Bank</span>
             <a class="live" href="${resolvePath("Atlas/")}" aria-label="Open Wasp Atlas">Wasp Atlas</a>
+            <a class="page-link" href="${resolvePath("catalog/")}"${isCurrent("catalog") ? ' aria-current="page"' : ""}>Design Catalog</a>
             <a class="live" href="https://hivelens.thecomputationalhive.com/" title="Open HiveLens">HiveLens</a>
             <a class="page-link" href="${resolvePath("about/")}"${isCurrent("about") ? ' aria-current="page"' : ""}>About</a>
           </div>
