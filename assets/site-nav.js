@@ -73,7 +73,7 @@ class SiteNav extends HTMLElement {
 
         .nav-links a,
         .nav-links span,
-        .page-link {
+        .page-link[aria-current="page"] {
           display: inline-flex;
           align-items: center;
           min-height: 38px;
@@ -86,6 +86,17 @@ class SiteNav extends HTMLElement {
           font-weight: 700;
           text-decoration: none;
           white-space: nowrap;
+        }
+
+        .page-link:not([aria-current="page"]) {
+          border-color: transparent;
+          background: transparent;
+        }
+
+        .page-link:not([aria-current="page"]):hover,
+        .page-link:not([aria-current="page"]):focus-visible {
+          border-color: rgba(16, 18, 20, 0.18);
+          background: rgba(255, 255, 255, 0.54);
         }
 
         .nav-links a.live {
@@ -120,7 +131,7 @@ class SiteNav extends HTMLElement {
 
           .nav-links a,
           .nav-links span,
-          .page-link {
+          .page-link[aria-current="page"] {
             justify-content: center;
             padding: 0 9px;
             text-align: center;
