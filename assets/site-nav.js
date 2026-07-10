@@ -89,14 +89,10 @@ class SiteNav extends HTMLElement {
         }
 
         .page-link:not([aria-current="page"]) {
-          border-color: transparent;
-          background: transparent;
-        }
-
-        .page-link:not([aria-current="page"]):hover,
-        .page-link:not([aria-current="page"]):focus-visible {
-          border-color: rgba(16, 18, 20, 0.18);
-          background: rgba(255, 255, 255, 0.54);
+          border-color: rgba(0, 208, 132, 0.58);
+          background: var(--dark-panel);
+          color: white;
+          box-shadow: 0 0 0 1px rgba(52, 226, 228, 0.12);
         }
 
         .nav-links a.live {
@@ -104,6 +100,18 @@ class SiteNav extends HTMLElement {
           background: var(--dark-panel);
           color: white;
           box-shadow: 0 0 0 1px rgba(52, 226, 228, 0.12);
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible,
+        .nav-links a.live:hover,
+        .nav-links a.live:focus-visible,
+        .page-link:not([aria-current="page"]):hover,
+        .page-link:not([aria-current="page"]):focus-visible {
+          border-color: rgba(16, 18, 20, 0.28);
+          background: white;
+          color: var(--ink);
+          box-shadow: none;
         }
 
         .nav-links span {
