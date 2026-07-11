@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=overlays-content" />
+    <title>hivelens-xr</title>
+    <link rel="icon" type="image/png" href="./graphics/hivelens_v0.png" />
+    <script type="module" crossorigin src="/HiveLens/assets/index-CrzgLZZ8.js"></script>
+    <link rel="stylesheet" crossorigin href="/HiveLens/assets/index-Du5d1S9F.css">
+  </head>
+  <body>
+    <div id="hud">
+      <div id="hud-header">
+        <div id="hud-brand">
+          <img id="hud-logo" src="./graphics/hivelens_v0.png" alt="hivelens logo" />
+          <h1>hivelens-xr</h1>
+        </div>
+        <div id="hud-header-actions">
+          <button id="btn-stop-ar" class="danger-action" type="button" hidden>Stop AR</button>
+          <button id="btn-toggle-menu" type="button" aria-expanded="true">Compact</button>
+        </div>
+      </div>
+      <div id="hud-extended">
+        <p id="supported-devices">Supported devices: Chrome on Android and Microsoft Edge on HoloLens 2. Partial iOS support is available through Mozilla WebXR Viewer.</p>
+        <p id="loaded-help" hidden>Enter AR, tap once to place the aggregation, then step through the assembly sequence.</p>
+        <div id="loader-controls">
+          <div id="load-source-choice" class="loader-section">
+            <button id="btn-choose-file-load" type="button">Load From File</button>
+            <button id="btn-choose-github-load" type="button">Load From GitHub</button>
+          </div>
+          <div id="file-load-controls" class="loader-section" hidden>
+            <select id="file-type" aria-label="Assembly file type">
+              <option value="wasp">Wasp Aggregation</option>
+              <option value="simpleAssembly">Simple Assembly</option>
+            </select>
+            <select id="model-units" aria-label="Model units">
+              <option value="millimeters">Millimeters</option>
+              <option value="centimeters" selected>Centimeters</option>
+              <option value="meters">Meters</option>
+            </select>
+            <input id="file-input" type="file" accept=".json,application/json" />
+            <button id="btn-load-file" type="button">Load File</button>
+          </div>
+          <div id="github-load-controls" class="loader-section" hidden>
+            <select id="github-group" aria-label="GitHub catalog group"></select>
+            <select id="github-design" aria-label="GitHub catalog design"></select>
+            <button id="btn-load-github" type="button">Load Design</button>
+          </div>
+        </div>
+        <div id="load-status">Choose a load source.</div>
+      </div>
+      <div id="controls">
+        <div id="timeline-controls">
+          <button id="btn-play" type="button" aria-label="Play aggregation steps">Play</button>
+          <input id="step-slider" type="range" min="0" max="0" value="0" step="1" aria-label="Aggregation step" />
+          <div id="step-time-control" aria-label="Playback speed">
+            <span>Seconds / step</span>
+            <div id="step-duration-control">
+              <button id="btn-duration-down" type="button" aria-label="Decrease seconds per step">−</button>
+              <output id="step-duration" aria-live="polite">1.5</output>
+              <button id="btn-duration-up" type="button" aria-label="Increase seconds per step">+</button>
+            </div>
+          </div>
+        </div>
+        <button id="btn-reset-step" type="button">Reset Step</button>
+        <button id="btn-reset-placement" type="button">Reset Placement</button>
+        <button id="btn-toggle-mode" type="button">Show All</button>
+        <button id="btn-toggle-wireframe" type="button">Wireframe: Off</button>
+        <button id="btn-toggle-grid" type="button">Grid: On</button>
+        <button id="btn-toggle-anchors" type="button">Anchor: On</button>
+      </div>
+      <div id="step-row">
+        <div id="step-label">Part 0 / 0</div>
+        <div id="anchor-status" hidden></div>
+      </div>
+      <div id="placement-hint" hidden>Position locked. Drag up/down to rotate, then release to place.</div>
+    </div>
+
+  </body>
+</html>
